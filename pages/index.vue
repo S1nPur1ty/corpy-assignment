@@ -1,6 +1,10 @@
-<script setup>
+<script setup lang="ts">
 import { onMounted } from 'vue'
 import { Modal } from 'flowbite'
+
+import { useCounterStore } from '~/stores/counter'
+
+const counterStore = useCounterStore()
 
 onMounted(() => {
     // setup available elements
@@ -15,11 +19,11 @@ onMounted(() => {
 
     // create a new modal instance
     if ($modalElement) {
-        const modal = new Modal($modalElement, modalOptions);
+        const modal = new Modal($modalElement as HTMLElement, modalOptions);
 
         // set event listeners for the button to show the modal
-        $buttonElement.addEventListener('click', () => modal.toggle());
-        $closeButton.addEventListener('click', () => modal.hide());
+        $buttonElement!.addEventListener('click', () => modal.toggle());
+        $closeButton!.addEventListener('click', () => modal.hide());
 
     }
 })
@@ -28,7 +32,8 @@ onMounted(() => {
 <template>
     <div>
         <div class="flex justify-center p-4">
-            <button id="button" data-modal-toggle="modal" data-modal-target="modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">Show modal</button>
+            {{ counterStore.count }}
+            <button id="button" data-modal-toggle="modal" data-modal-target="modal" type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800" @click="counterStore.increment()">Show modal</button>
         </div>
 
         <div id="modal" tabindex="-1" aria-hidden="true" class="fixed top-0 left-0 right-0 z-50 hidden w-full p-4 overflow-x-hidden overflow-y-auto md:inset-0 h-[calc(100%-1rem)] max-h-full">
