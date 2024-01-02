@@ -3,7 +3,7 @@
     <Header class="sticky top-0 z-10" />
     <div class="grid grid-cols-[auto_1fr]">
       <Sidebar />
-      <main class="p-5 box-border overflow-scroll">
+      <main class="box-border overflow-scroll">
         <NuxtPage />
       </main>
     </div>

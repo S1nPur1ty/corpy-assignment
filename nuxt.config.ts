@@ -8,5 +8,13 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-  modules: ['@pinia/nuxt', 'nuxt-icon'],
+  modules: [
+    '@pinia/nuxt', 
+    'nuxt-icon',
+    '@nuxtjs/color-mode'
+  ],
+  colorMode: {
+    classSuffix: '',
+    preference: 'light',
+  }
 })

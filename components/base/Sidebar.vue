@@ -1,5 +1,5 @@
 <template>
-    <aside class="flex flex-col items-center py-1 gap-2 bg-white border-r border-r-1 border-gray-200" aria-label="Sidebar">
+    <aside class="flex flex-col items-center py-1 gap-2 bg-white border-r border-r-1 border-gray-200 dark:bg-gray-900 dark:border-gray-700" aria-label="Sidebar">
         <nav>
             <ul class="flex flex-col gap-2 p-2">
                 <li
@@ -11,7 +11,7 @@
                     <Icon :name="icon" />
                 </li>
             </ul>
-            <hr />
+            <hr class="dark:border-gray-700" />
         </nav>
 
         <button type="button" class="flex gap-2 items-center justify-center h-9 w-9 text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
@@ -21,20 +21,14 @@
     </aside>
 </template>
 
-<script lang="ts">
-  import { useDashboardStore } from '@/stores/dashboard';
+<script setup lang="ts">
+    import { useDashboardStore } from '@/stores/dashboard';
 
-  export default {
-    setup() {
-        const dashboardStore = useDashboardStore()
-        const icons = [
-            'fa6-solid:database',
-            'fa6-solid:robot',
-            'fa6-solid:rocket',
-            'fa6-solid:chart-column',
-        ];
-
-        return { dashboardStore, icons };
-    }
-  }
+    const dashboardStore = useDashboardStore()
+    const icons = [
+        'fa6-solid:database',
+        'fa6-solid:robot',
+        'fa6-solid:rocket',
+        'fa6-solid:chart-column',
+    ];
 </script>
