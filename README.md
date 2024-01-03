@@ -10,16 +10,20 @@ This assignment is made with the following framework: Vue/Nuxt.js. It also inclu
 
 ## Installation
 
-\```bash
-# Navigate to the project directory
+### Navigate to the project directory
+```
 cd yourproject
+```
 
-# Install dependencies
+### Install dependencies
+```
 npm install
+```
 
-# Serve with hot reload at localhost:3000
+### Serve with hot reload at localhost:3000
+```
 npm run dev
-\```
+```
 
 ## Code Structure
 
@@ -39,7 +43,7 @@ Briefly explain the project structure and what each high-level directory contain
 
 Instructions on how to run the tests included with your project.
 
-\```bash
-# Run unit tests
+### Run unit tests
+```
 npm run test
-\```
+```
