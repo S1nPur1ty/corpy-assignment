@@ -7,12 +7,17 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "test:unit": "vitest"
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^3.3.2",
+    "@vitejs/plugin-vue": "^5.0.2",
+    "@vue/test-utils": "^2.4.3",
+    "jsdom": "^23.0.1",
     "nuxt": "^3.9.0",
     "nuxt-icon": "^0.6.8",
+    "vitest": "^1.1.1",
     "vue": "^3.3.13",
     "vue-router": "^4.2.5"
   },

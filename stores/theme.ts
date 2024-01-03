@@ -8,12 +8,12 @@ export const useThemeStore = defineStore( 'theme', {
   actions: {
     toggle() {
       const newTheme = useColorMode().preference === 'light' ? 'dark' : 'light'
-      useColorMode().preference = newTheme;
-      this.theme = newTheme;
+      useColorMode().preference = newTheme
+      this.theme = newTheme
     },
 
     onMounted() {
-      this.theme = useColorMode().preference as Theme;
+      this.theme = useColorMode().preference as Theme
     }
   }
 } )

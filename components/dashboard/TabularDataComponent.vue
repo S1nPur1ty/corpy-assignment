@@ -131,14 +131,16 @@
 </template>
 
 <script setup lang="ts">
+    import { type File } from '../../types/File'
+
     const props = defineProps({data: Object})
-    
+
     const searchQuery = ref('')
     const filteredFiles = computed(() => {
         if (!searchQuery.value)
             return props.data
 
-        return props.data.filter( file => 
+        return props?.data?.filter( (file: File) => 
             file.name.toLowerCase().includes(
                 searchQuery.value.toLowerCase() 
             )
