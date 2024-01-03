@@ -1,0 +1,50 @@
+[
+  {
+    "name": "関東書店売り上げ動向_202304.csv",
+    "rows": 3000,
+    "cols": 200,
+    "createdAt": "2023年5月2日",
+    "updatedAt": "2023年5月2日",
+    "status": "OK"
+  },
+  {
+    "name": "関東書店売り上げ動向_202303.csv",
+    "rows": 3000,
+    "cols": 200,
+    "createdAt": "2023年5月2日",
+    "updatedAt": "2023年5月2日",
+    "status": "OK"
+  },
+  {
+    "name": "関東書店売り上げ動向_202302.csv",
+    "rows": 3000,
+    "cols": 200,
+    "createdAt": "2023年5月2日",
+    "updatedAt": "2023年5月2日",
+    "status": "Defective Value Exist"
+  },
+  {
+    "name": "関東書店売り上げ動向_202301.csv",
+    "rows": 3000,
+    "cols": 200,
+    "createdAt": "2023年5月2日",
+    "updatedAt": "2023年5月2日",
+    "status": "Uploading"
+  },
+  {
+    "name": "関東書店売り上げ動向_202300.csv",
+    "rows": 3000,
+    "cols": 200,
+    "createdAt": "2023年5月2日",
+    "updatedAt": "2023年5月2日",
+    "status": "OK"
+  },
+  {
+    "name": "関東書店売り上げ動向_202299.csv",
+    "rows": 3000,
+    "cols": 200,
+    "createdAt": "2023年5月2日",
+    "updatedAt": "2023年5月2日",
+    "status": "OK"
+  }
+]

@@ -1,75 +1,47 @@
-# Nuxt 3 Minimal Starter
+# Corpy & Co Assignment
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This assignment is made with the following framework: Vue/Nuxt.js. It also includes, Typescript, Pinia, i18n and Dark/Light mode using Tailwind and Flowbite elements. Also, it includes a very minimal Unit Test example, and it is responsive and clean as expected.
 
-## Setup
+## Table of Contents
 
-Make sure to install the dependencies:
+- [Installation](#installation)
+- [Code Structure](#code-structure)
+- [Testing](#testing)
 
-```bash
-# npm
+## Installation
+
+### Navigate to the project directory
+```
+cd ~/.../projectFolder
+```
+
+### Install dependencies
+```
 npm install
-
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
+### Run
+```
 npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
 ```
 
-## Production
+### Code Structure
 
-Build the application for production:
+- `assets`: Static assets like images and stylesheets.
+- `components/base`: Reusable Vue components (Header, Sidebar).
+- `components/dashboard`: Components used in the dashboard.
+- `layouts`: Application layout templates.
+- `pages`: The application's page content.
+- `server/api`: Backend API logic.
+- `stores`: State management with Pinia.
+- `tests`: Unit and integration tests.
+- `types`: TypeScript type definitions.
 
-```bash
-# npm
-npm run build
+### Testing
 
-# pnpm
-pnpm run build
+Instructions on how to run the tests included with your project.
 
-# yarn
-yarn build
-
-# bun
-bun run build
+### Run unit tests
 ```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
+npm run test
 ```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
