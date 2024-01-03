@@ -12,7 +12,7 @@ This assignment is made with the following framework: Vue/Nuxt.js. It also inclu
 
 ### Navigate to the project directory
 ```
-cd yourproject
+cd ~/.../projectFolder
 ```
 
 ### Install dependencies
