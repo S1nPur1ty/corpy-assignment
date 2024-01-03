@@ -1,4 +1,4 @@
-import files from '~/mocks/mock-data.json'
+import files from './mock-data.json'
 
 export default () => {
     return files

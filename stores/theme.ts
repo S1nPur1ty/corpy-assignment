@@ -3,11 +3,17 @@ type Theme = 'light' | 'dark'
 
 export const useThemeStore = defineStore( 'theme', {
   state: () => ({
-    currentTheme: useColorMode().preference as Theme
+    theme: useColorMode().preference as Theme
   }),
   actions: {
     toggle() {
-      useColorMode().preference = useColorMode().preference === 'light' ? 'dark' : 'light'
+      const newTheme = useColorMode().preference === 'light' ? 'dark' : 'light'
+      useColorMode().preference = newTheme;
+      this.theme = newTheme;
+    },
+
+    onMounted() {
+      this.theme = useColorMode().preference as Theme;
     }
   }
 } )

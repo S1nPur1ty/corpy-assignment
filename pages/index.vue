@@ -6,12 +6,13 @@
           <p class="text-lg text-gray-500">データセットを管理する</p>
       </div>
 
-      <ul class="flex flex-wrap gap-6 text-sm font-medium text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400">
+      <ul class="flex gap-6 overflow-x-scroll whitespace-nowrap text-sm font-medium text-gray-500 border-b border-gray-200 dark:border-gray-700 dark:text-gray-400">
           <li @click="selectedTabIndex = 0" class="hover:text-blue-600" :class="{ 'border-b-2 border-blue-600 text-blue-600': selectedTabIndex === 0 }">
             <a href="#" class="inline-block py-3">
                 数値データ
             </a>
           </li>
+
           <li @click="selectedTabIndex = 1" class="hover:text-blue-600" :class="{ 'border-b-2 border-blue-600 text-blue-600': selectedTabIndex === 1 }">
             <a href="#" class="inline-block py-3">
                 画像データ
@@ -37,9 +38,9 @@ import { defineAsyncComponent } from 'vue'
 
 export default defineComponent({
   components: {
-      TabularDataComponent: defineAsyncComponent(() => import('@/components/widgets/TabularDataComponent.vue')),
-      ImageDataComponent: defineAsyncComponent(() => import('@/components/widgets/ImageDataComponent.vue')),
-      TextDataComponent: defineAsyncComponent(() => import('@/components/widgets/TextDataComponent.vue'))
+      TabularDataComponent: defineAsyncComponent(() => import('@/components/dashboard/TabularDataComponent.vue')),
+      ImageDataComponent: defineAsyncComponent(() => import('@/components/dashboard/ImageDataComponent.vue')),
+      TextDataComponent: defineAsyncComponent(() => import('@/components/dashboard/TextDataComponent.vue'))
   },
   async setup() {
       const { data } = await useAsyncData(() => $fetch('/api/files'))

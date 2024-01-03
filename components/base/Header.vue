@@ -3,10 +3,10 @@
         <div>
             <img src="@/assets/images/logo.svg">
         </div>
-
+        
         <div class="flex flex-row items-center gap-5 text-gray-600">
             <button v-if="isMounted" class="flex flex-row items-center gap-2 text-gray-600" @click="themeStore.toggle()">
-                <Icon v-if="themeStore.currentTheme === 'light'" name="fa6-solid:moon" class="w-5 h-5" />
+                <Icon v-if="themeStore.theme === 'light'" name="fa6-solid:moon" class="w-5 h-5" />
                 <Icon v-else name="fa6-solid:sun" class="w-5 h-5" />
             </button>
 
@@ -26,6 +26,7 @@
     const isMounted = ref(false)
 
     onMounted(() => {
+        themeStore.onMounted()
         isMounted.value = true
     })
 </script>
