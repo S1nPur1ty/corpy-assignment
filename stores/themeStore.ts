@@ -5,6 +5,7 @@ export const useThemeStore = defineStore( 'theme', {
   state: () => ({
     theme: useColorMode().preference as Theme
   }),
+  
   actions: {
     toggle() {
       const newTheme = useColorMode().preference === 'light' ? 'dark' : 'light'

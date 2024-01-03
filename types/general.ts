@@ -7,4 +7,6 @@ type File = {
     status: string
 }
 
-export { type File }
+type Language = 'en' | 'jp';
+
+export { type File, type Language };

@@ -22,7 +22,7 @@
 
 <script setup lang="ts">
     const tabIndex = ref(0)
-    const setTabIndex = (newTabIndex: number) => tabIndex.value = newTabIndex
+    const setTabIndex = ( newTabIndex: number ) => tabIndex.value = newTabIndex
     const icons = [
         'fa6-solid:database',
         'fa6-solid:robot',

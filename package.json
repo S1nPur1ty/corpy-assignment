@@ -12,6 +12,7 @@
   },
   "devDependencies": {
     "@nuxtjs/color-mode": "^3.3.2",
+    "@nuxtjs/i18n": "^8.0.0",
     "@vitejs/plugin-vue": "^5.0.2",
     "@vue/test-utils": "^2.4.3",
     "jsdom": "^23.0.1",
