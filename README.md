@@ -26,7 +26,6 @@ npm run dev
 ```
 
 ### Code Structure
-
 - `assets`: Static assets like images and stylesheets.
 - `components/base`: Reusable Vue components (Header, Sidebar).
 - `components/dashboard`: Components used in the dashboard.
@@ -37,11 +36,7 @@ npm run dev
 - `tests`: Unit and integration tests.
 - `types`: TypeScript type definitions.
 
-### Testing
-
-Instructions on how to run the tests included with your project.
-
-### Run unit tests
+### Test
 ```
 npm run test
 ```
