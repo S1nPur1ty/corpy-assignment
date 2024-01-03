@@ -1,5 +1,5 @@
-import files from '~/mocks/mock-data.json';
+import files from '~/mocks/mock-data.json'
 
 export default () => {
-    return files;
+    return files
 }

@@ -5,12 +5,12 @@
         </div>
 
         <div class="flex flex-row items-center gap-5 text-gray-600">
-            <button v-if="isMounted" class="flex flex-row items-center gap-2 text-gray-600" @click="themeStore.toggleTheme()">
+            <button v-if="isMounted" class="flex flex-row items-center gap-2 text-gray-600" @click="themeStore.toggle()">
                 <Icon v-if="themeStore.currentTheme === 'light'" name="fa6-solid:moon" class="w-5 h-5" />
                 <Icon v-else name="fa6-solid:sun" class="w-5 h-5" />
             </button>
 
-            <Icon name="fa6-solid:bell" class="w-5 h-5" />
+            <Icon name="fa6-solid:bell" class="w-5 h-5 cursor-pointer" />
 
             <button type="button" class="flex gap-2 items-center justify-center h-9 w-9 text-white bg-[#202A37] hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800">
                 <p class="font-extralight text-xs">CO</p>
@@ -20,11 +20,12 @@
 </template>
 
 <script setup lang="ts">
-    import { useThemeStore } from '@/stores/theme';
-    const themeStore = useThemeStore();
-    const isMounted = ref(false);
+    import { useThemeStore } from '@/stores/theme'
+    
+    const themeStore = useThemeStore()
+    const isMounted = ref(false)
 
     onMounted(() => {
-        isMounted.value = true;
+        isMounted.value = true
     })
 </script>
