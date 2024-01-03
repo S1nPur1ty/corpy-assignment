@@ -1,75 +1,45 @@
-# Nuxt 3 Minimal Starter
+# Corpy & Co Assignment
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This assignment is made with the following framework: Vue/Nuxt.js. It also includes, Typescript, Pinia, i18n and Dark/Light mode using Tailwind and Flowbite elements. Also, it includes a very minimal Unit Test example, and it is responsive and clean as expected.
 
-## Setup
+## Table of Contents
 
-Make sure to install the dependencies:
+- [Installation](#installation)
+- [Code Structure](#code-structure)
+- [Testing](#testing)
 
-```bash
-# npm
+## Installation
+
+\```bash
+# Navigate to the project directory
+cd yourproject
+
+# Install dependencies
 npm install
 
-# pnpm
-pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
+# Serve with hot reload at localhost:3000
 npm run dev
+\```
 
-# pnpm
-pnpm run dev
+## Code Structure
 
-# yarn
-yarn dev
+Briefly explain the project structure and what each high-level directory contains.
 
-# bun
-bun run dev
-```
+- `assets`: Static assets like images and stylesheets.
+- `components/base`: Reusable Vue components (Header, Sidebar).
+- `components/dashboard`: Components used in the dashboard.
+- `layouts`: Application layout templates.
+- `pages`: The application's page content.
+- `server/api`: Backend API logic.
+- `stores`: State management with Pinia.
+- `tests`: Unit and integration tests.
+- `types`: TypeScript type definitions.
 
-## Production
+## Testing
 
-Build the application for production:
+Instructions on how to run the tests included with your project.
 
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+\```bash
+# Run unit tests
+npm run test
+\```
