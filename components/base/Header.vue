@@ -47,12 +47,15 @@
 
     const isOpen = ref(false)
 
-    const localeStore = useLocaleStore();
-    const { locale } = useI18n();
+    const localeStore = useLocaleStore()
+    const { locale } = useI18n()
 
-    watch(() => localeStore.currentLanguage, (newLanguage) => {
-    locale.value = newLanguage;
-    }, { immediate: true });
+    watch( () => localeStore.currentLanguage, 
+        (newLanguage) => {
+            locale.value = newLanguage
+            isOpen.value = false
+        }, {immediate: true}
+    )
 
     const themeStore = useThemeStore()
     const isMounted = ref(false)

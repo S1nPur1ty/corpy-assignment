@@ -5,4 +5,4 @@ describe('TabularDataComponent', () => {
     it('renders correctly with initial data', () => {
        expect(TabularDataComponent).toBeDefined()
     })
-});
+})
