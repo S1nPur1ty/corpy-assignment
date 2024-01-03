@@ -1,5 +1,6 @@
 <template>
     <div class="flex flex-col gap-6">
+
         <div class="buttons flex flex-row gap-6">
             <button type="button" class="flex gap-2 items-center py-2.5 px-5 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700">
             <Icon name="fa6-solid:angle-down" />
@@ -9,6 +10,16 @@
             <Icon name="fa6-solid:arrow-up-from-bracket" />
             データセットをアップロード
             </button>
+
+            <div class="flex items-center px-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                <Icon name="fa6-solid:magnifying-glass" class="text-gray-400" />
+                <input 
+                    type="text" 
+                    v-model="searchQuery" 
+                    class="bg-transparent border-transparent focus:border-transparent focus:ring-0"
+                    placeholder="ファイル名で検索する"
+                />
+            </div>
         </div>
     
         <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
@@ -44,7 +55,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                <tr v-for="file in files" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
+                <tr v-for="file in filteredFiles" class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 hover:bg-gray-50 dark:hover:bg-gray-600">
                     <td class="w-4 p-4">
                         <div class="flex items-center">
                             <input id="checkbox-table-search-1" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:focus:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600">
@@ -61,10 +72,10 @@
                     {{ `${file.rows} x ${file.cols}` }}
                     </td>
                     <td class="px-6 py-4">
-                    {{ file.date }}
+                    {{ file.createdAt }}
                     </td>
                     <td class="px-6 py-4">
-                    {{ file.date2 }}
+                    {{ file.updatedAt }}
                     </td>
                     <td class="px-6 py-4">
                         <span :class="getStatusClass(file.status)" class="py-1 px-3 rounded-md">{{ file.status }}</span>
@@ -112,74 +123,29 @@
     </div>
 </template>
 
-<script lang="ts">
-export default defineComponent({
-    name: 'TabularDataComponent',
-    setup() {
-        const files = [
-            {
-                name: '関東書店売り上げ動向_202304.csv',
-                rows: 3000,
-                cols: 200,
-                date: '2023年5月2日',
-                date2: '2023年5月2日',
-                status: 'OK'
-            },
-            {
-                name: '関東書店売り上げ動向_202303.csv',
-                rows: 3000,
-                cols: 200,
-                date: '2023年5月2日',
-                date2: '2023年5月2日',
-                status: 'OK'
-            },
-            {
-                name: '関東書店売り上げ動向_202302.csv',
-                rows: 3000,
-                cols: 200,
-                date: '2023年5月2日',
-                date2: '2023年5月2日',
-                status: 'Defective Value Exist'
-            },
-            {
-                name: '関東書店売り上げ動向_202301.csv',
-                rows: 3000,
-                cols: 200,
-                date: '2023年5月2日',
-                date2: '2023年5月2日',
-                status: 'Uploading'
-            },
-            {
-                name: '関東書店売り上げ動向_202300.csv',
-                rows: 3000,
-                cols: 200,
-                date: '2023年5月2日',
-                date2: '2023年5月2日',
-                status: 'OK'
-            },
-            {
-                name: '関東書店売り上げ動向_202299.csv',
-                rows: 3000,
-                cols: 200,
-                date: '2023年5月2日',
-                date2: '2023年5月2日',
-                status: 'OK'
-            },
-        ]
+<script setup lang="ts">
+    const { data, error } = await useAsyncData(() => $fetch('/api/files'));
+    const files = data.value || [];
+    const searchQuery = ref('');
 
-        const getStatusClass = (status: string) => {
-            switch(status) {
-                case 'Uploading':
-                    return 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300';
-                case 'Defective Value Exist':
-                    return 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300';
-                case 'OK':
-                default:
-                    return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300';
-            }
+    const filteredFiles = computed(() => {
+        if (!searchQuery.value) {
+            return files;
         }
+        return files.filter(file => 
+            file.name.toLowerCase().includes(searchQuery.value.toLowerCase())
+        );
+    });
 
-        return { files, getStatusClass }
-    },
-});
+    const getStatusClass = (status: string) => {
+        switch(status) {
+            case 'Uploading':
+                return 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-300';
+            case 'Defective Value Exist':
+                return 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-300';
+            case 'OK':
+            default:
+                return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300';
+        }
+    }
 </script>

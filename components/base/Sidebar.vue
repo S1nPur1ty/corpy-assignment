@@ -4,8 +4,8 @@
             <ul class="flex flex-col gap-2 p-2">
                 <li
                     v-for="(icon, index) in icons" :key="icon"
-                    class="flex items-center justify-center w-9 h-9 rounded-lg cursor-pointer transition-color transform-gpu duration-300 ease-in-out hover:bg-gray-100 hover:text-blue-700"
-                    :class="{ 'bg-gray-100': dashboardStore.tabIndex === index, 'text-gray-500': dashboardStore.tabIndex !== index }"
+                    class="flex items-center justify-center w-9 h-9 rounded-lg cursor-pointer transition-color transform-gpu duration-300 ease-in-out hover:bg-gray-100 hover:text-blue-700 dark:hover:bg-gray-800"
+                    :class="{ 'bg-gray-100 dark:bg-gray-800 dark:text-white': dashboardStore.tabIndex === index, 'text-gray-500': dashboardStore.tabIndex !== index }"
                     @click="dashboardStore.tabIndex = index"
                     >
                     <Icon :name="icon" />
