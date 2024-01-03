@@ -20,14 +20,12 @@ cd ~/.../projectFolder
 npm install
 ```
 
-### Serve with hot reload at localhost:3000
+### Run
 ```
 npm run dev
 ```
 
-## Code Structure
-
-Briefly explain the project structure and what each high-level directory contains.
+### Code Structure
 
 - `assets`: Static assets like images and stylesheets.
 - `components/base`: Reusable Vue components (Header, Sidebar).
@@ -39,7 +37,7 @@ Briefly explain the project structure and what each high-level directory contain
 - `tests`: Unit and integration tests.
 - `types`: TypeScript type definitions.
 
-## Testing
+### Testing
 
 Instructions on how to run the tests included with your project.
 
