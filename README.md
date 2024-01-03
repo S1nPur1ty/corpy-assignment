@@ -1,6 +1,6 @@
 # Corpy & Co Assignment
 
-This assignment is made with the following framework: Vue/Nuxt.js. It also includes, Typescript, Pinia, i18n and Dark/Light mode using Tailwind and Flowbite elements. Also, it includes a very minimal Unit Test example, and it is responsive and clean as expected.
+This assignment is made with the following framework: Vue/Nuxt.js. It also includes, Typescript, Pinia, i18n and Dark/Light mode using Tailwind and Flowbite elements. It is responsive and clean as intended. The additional features are dark/light mode and i18n translation support.
 
 ## Table of Contents
 
