@@ -1,8 +1,7 @@
-// stores/localeStore.ts
 import { defineStore } from 'pinia'
 import { type Language } from '@/types/general'
 
-export const useLocaleStore = defineStore('locale', {
+export const useLocaleStore = defineStore( 'locale', {
   state: () => ( {
     languages: ['en', 'jp'],
     currentLanguage: 'jp' as Language,
@@ -12,4 +11,4 @@ export const useLocaleStore = defineStore('locale', {
       this.currentLanguage = newLanguage
     },
   },
-})
+} )

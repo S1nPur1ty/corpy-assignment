@@ -10,25 +10,37 @@ This assignment is made with the following framework: Vue/Nuxt.js. It also inclu
 
 ## Installation
 
-### Navigate to the project directory
+#### Navigate to the project directory
 ```
 cd ~/.../projectFolder
 ```
 
-### Install dependencies
+#### Install dependencies
 ```
 npm install
 ```
 
-### Run
+#### Run
 ```
 npm run dev
 ```
 
-### Code Structure
+### Or build and run the project with Docker
+
+#### Build
+```
+docker-compose build
+```
+
+#### Run
+```
+docker-compose up
+```
+
+## Code Structure
 - `assets`: Static assets like images and stylesheets.
-- `components/base`: Reusable Vue components (Header, Sidebar).
-- `components/dashboard`: Components used in the dashboard.
+- `components/base`: Base Components which contains the Header and the Sidebar.
+- `components/views`: View Components used in the dashboard.
 - `layouts`: Application layout templates.
 - `pages`: The application's page content.
 - `server/api`: Backend API logic.
@@ -36,7 +48,7 @@ npm run dev
 - `tests`: Unit and integration tests.
 - `types`: TypeScript type definitions.
 
-### Test
+## Testing
 ```
 npm run test
 ```

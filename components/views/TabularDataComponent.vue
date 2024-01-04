@@ -131,6 +131,7 @@
 </template>
 
 <script setup lang="ts">
+    import { ref, computed } from 'vue'
     import { type File } from '../../types/general'
 
     const props = defineProps( { data: Object } )

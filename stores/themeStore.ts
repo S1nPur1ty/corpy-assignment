@@ -1,10 +1,10 @@
 import { defineStore } from 'pinia'
-type Theme = 'light' | 'dark'
+import type { Theme } from '@/types/general'
 
 export const useThemeStore = defineStore( 'theme', {
-  state: () => ({
+  state: () => ( {
     theme: useColorMode().preference as Theme
-  }),
+  } ),
   
   actions: {
     toggle() {

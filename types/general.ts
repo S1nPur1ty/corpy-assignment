@@ -9,4 +9,6 @@ type File = {
 
 type Language = 'en' | 'jp'
 
-export { type File, type Language }
+type Theme = 'light' | 'dark'
+
+export { type File, type Language, type Theme }
