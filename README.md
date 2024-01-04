@@ -25,7 +25,7 @@ npm install
 npm run dev
 ```
 
-or
+or build and run the project with Docker
 
 ### Build
 ```
