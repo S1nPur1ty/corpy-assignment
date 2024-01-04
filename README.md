@@ -27,8 +27,8 @@ npm run dev
 
 ### Code Structure
 - `assets`: Static assets like images and stylesheets.
-- `components/base`: Reusable Vue components (Header, Sidebar).
-- `components/dashboard`: Components used in the dashboard.
+- `components/base`: Base Components which contains the Header and the Sidebar.
+- `components/views`: View Components used in the dashboard.
 - `layouts`: Application layout templates.
 - `pages`: The application's page content.
 - `server/api`: Backend API logic.

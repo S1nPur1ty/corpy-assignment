@@ -30,9 +30,9 @@
   import { defineAsyncComponent, computed, ref } from 'vue'
   import { useAsyncData } from 'nuxt/app'
 
-  const TabularDataComponent = defineAsyncComponent(() => import('@/components/dashboard/TabularDataComponent.vue'))
-  const ImageDataComponent = defineAsyncComponent(() => import('@/components/dashboard/ImageDataComponent.vue'))
-  const TextDataComponent = defineAsyncComponent(() => import('@/components/dashboard/TextDataComponent.vue'))
+  const TabularDataComponent = defineAsyncComponent(() => import('@/components/views/TabularDataComponent.vue'))
+  const ImageDataComponent = defineAsyncComponent(() => import('@/components/views/ImageDataComponent.vue'))
+  const TextDataComponent = defineAsyncComponent(() => import('@/components/views/TextDataComponent.vue'))
 
   const { data } = await useAsyncData( () => $fetch('/api/files') )
 
