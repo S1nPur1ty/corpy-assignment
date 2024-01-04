@@ -10,29 +10,29 @@ This assignment is made with the following framework: Vue/Nuxt.js. It also inclu
 
 ## Installation
 
-### Navigate to the project directory
+#### Navigate to the project directory
 ```
 cd ~/.../projectFolder
 ```
 
-### Install dependencies
+#### Install dependencies
 ```
 npm install
 ```
 
-### Run
+#### Run
 ```
 npm run dev
 ```
 
-or build and run the project with Docker
+### Or build and run the project with Docker
 
-### Build
+#### Build
 ```
 docker-compose build
 ```
 
-### Run
+#### Run
 ```
 docker-compose up
 ```
