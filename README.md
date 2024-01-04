@@ -26,7 +26,7 @@ npm install
 npm run dev
 ```
 
-### Docker Alternative
+## Docker Alternative
 
 ### Build
 ```
@@ -38,7 +38,7 @@ docker-compose build
 docker-compose up
 ```
 
-### Code Structure
+## Code Structure
 - `assets`: Static assets like images and stylesheets.
 - `components/base`: Base Components which contains the Header and the Sidebar.
 - `components/views`: View Components used in the dashboard.
@@ -49,7 +49,7 @@ docker-compose up
 - `tests`: Unit and integration tests.
 - `types`: TypeScript type definitions.
 
-### Testing
+## Testing
 ```
 npm run test
 ```
