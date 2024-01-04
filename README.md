@@ -5,6 +5,7 @@ This assignment is made with the following framework: Vue/Nuxt.js. It also inclu
 ## Table of Contents
 
 - [Installation](#installation)
+- [Docker Alternative](#docker-alternative)
 - [Code Structure](#code-structure)
 - [Testing](#testing)
 
@@ -25,6 +26,18 @@ npm install
 npm run dev
 ```
 
+### Docker Alternative
+
+### Build
+```
+docker-compose build
+```
+
+### Run
+```
+docker-compose up
+```
+
 ### Code Structure
 - `assets`: Static assets like images and stylesheets.
 - `components/base`: Base Components which contains the Header and the Sidebar.
@@ -36,7 +49,7 @@ npm run dev
 - `tests`: Unit and integration tests.
 - `types`: TypeScript type definitions.
 
-### Test
+### Testing
 ```
 npm run test
 ```
