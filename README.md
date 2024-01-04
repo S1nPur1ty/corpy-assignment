@@ -5,7 +5,6 @@ This assignment is made with the following framework: Vue/Nuxt.js. It also inclu
 ## Table of Contents
 
 - [Installation](#installation)
-- [Docker Alternative](#docker-alternative)
 - [Code Structure](#code-structure)
 - [Testing](#testing)
 
@@ -26,7 +25,7 @@ npm install
 npm run dev
 ```
 
-## Docker Alternative
+or
 
 ### Build
 ```
